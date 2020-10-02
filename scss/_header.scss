@@ -1,0 +1,201 @@
+@import 'variable';
+@import 'animation';
+
+.header {
+  overflow: hidden;
+  background-color: $skyblue;
+  color: $cWhite;
+  width: calc(100% - #{$side-nav-width});
+  position: fixed;
+  transform: translateX(-100%);
+  transition: 0.3s cubic-bezier(0.9, 0, 0, 1);
+  z-index: 9999;
+  // display: none;
+  a {
+    text-decoration: none;
+    color: $cWhite;
+  }
+  &.nav-active {
+    // display: block;
+    transform: none;
+    // animation: nav-lide-anim;
+  }
+}
+.header-inner {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+.header-side {
+  width: $side-nav-width;
+  background-color: $skyblue;
+  height: 100vh;
+  flex-basis: $side-nav-width;
+  position: fixed;
+  right: 0;
+  z-index: 1;
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    .nav-btn {
+      width: 38px;
+      &:hover {
+        cursor: pointer;
+      }
+      .nav-btn-inner {
+        height: 18px;
+        position: relative;
+        & > span {
+          position: absolute;
+          height: 2px;
+          width: 100%;
+          background-color: #fff;
+          display: block;
+          transition: 0.3s cubic-bezier(0.9, 0, 0, 1);
+          &:nth-child(2),
+          &:nth-child(3) {
+            width: 80%;
+          }
+          &:nth-child(2) {
+            top: 8px;
+          }
+          &:nth-child(3) {
+            bottom: 0;
+          }
+        }
+      }
+      .nav-btn-txt {
+        width: 80%;
+      }
+    }
+  }
+}
+.nav-btn.burger-open {
+  .nav-btn-inner {
+    position: relative;
+    & > span {
+      // left: -8px;
+      &:nth-child(1) {
+        opacity: 0;
+      }
+      &:nth-child(2) {
+        transform: rotate(-45deg) translate(-6px, 4px);
+        top: 0;
+        // left: -8px;
+      }
+      &:nth-child(3) {
+        transform: rotate(45deg) translate(-6px, -6px);
+        // left: -8px;
+      }
+    }
+  }
+}
+nav {
+  position: relative;
+  flex: 1 1 auto;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  .header-bg-image {
+    width: 80%;
+    position: absolute;
+    bottom: -30px;
+    @include bg-img($size: contain, $position: bottom center);
+    background-image: url(#{$imgDir}nav-back-logo.svg);
+    height: calc(100% - 80px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@mixin before-nav-arrow {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 20px;
+  height: 20px;
+  @include bg-img($size: contain);
+  background-image: url(#{$imgDir}nav-arrow.svg);
+}
+$nav-padding: 100% / 20;
+.nav-container {
+  width: 100%;
+  padding: 0 $nav-padding;
+  top: 10%;
+  position: absolute;
+  & > h1 {
+    margin-bottom: 30px;
+    width: 340px;
+  }
+  .nav-outer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    & > li {
+      flex: 0 1 33.33%;
+      &:nth-child(1) > p,
+      &:nth-child(2) > p,
+      &:nth-child(4) > p {
+        position: relative;
+        padding-left: 25px;
+        &::before {
+          @include before-nav-arrow;
+        }
+      }
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+      & > p {
+        font-size: 2rem;
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+        & > a {
+          position: relative;
+          display: block;
+          padding-left: 25px;
+          &::before {
+            @include before-nav-arrow;
+          }
+        }
+      }
+    }
+  }
+}
+.nav-inner {
+  & > li {
+    margin-bottom: 7px;
+    opacity: 0;
+    @include mq-down(ll){
+      margin-bottom: 5px;
+    }
+    a {
+      position: relative;
+      display: inline-block;
+      &::after {
+        position: absolute;
+        content: '';
+        width: 0;
+        // transform: scaleX(0);
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: #fff;
+        transition: 0.3s ease-in-out;
+      }
+      &:hover {
+        &::after {
+          width: 100%;
+          // transform: scaleX(1);
+        }
+      }
+    }
+  }
+}
