@@ -1390,6 +1390,10 @@ $sub__tit2-width: 280px;
 .ins__inner {
   background-color: $skySea;
   padding: 40px;
+  position: relative;
+  &:not(:last-child) {
+    margin-bottom: $mb-100 * 1.5;
+  }
 }
 .table__col {
   border-top: 1px solid $table-border;
@@ -1476,4 +1480,48 @@ $sub__tit2-width: 280px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+// electricalequipment
+.ins__list {
+  margin-top: $m;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+  & > li {
+    & > p {
+      font-weight: bold;
+      color: $cTitle;
+      margin-bottom: $s;
+    }
+    &:not(:last-child) {
+      margin-bottom: $m;
+    }
+  }
+}
+.ins__list__menu {
+  & > li {
+    background-color: #fff;
+    padding: $m * 0.8;
+    b {
+      color: $cTitle;
+      font-weight: bold;
+    }
+    &:not(:last-child) {
+      margin-bottom: $m * 2;
+    }
+  }
+}
+.ins__title {
+  border: 2px solid #121b62;
+  background-color: #fff;
+  color: #121b62;
+  text-align: center;
+  padding: 2px 50px;
+  display: inline-block;
+  position: absolute;
+  font-weight: bold;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 30px;
+  top: -18px;
 }
