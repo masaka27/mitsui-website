@@ -1,5 +1,25 @@
 gsap.registerPlugin(ScrollTrigger);
 
+// タブ切り替え
+// $(function () {
+//   let tabs = $('.tab__menu'); // tabのクラスを全て取得し、変数tabsに配列で定義
+//   $('.tab__menu').on('click', function () {
+//     // tabをクリックしたらイベント発火
+//     $('.is-active').removeClass('is-active'); // activeクラスを消す
+//     $(this).addClass('is-active'); // クリックした箇所にactiveクラスを追加
+//     const index = tabs.index(this); // クリックした箇所がタブの何番目か判定し、定数indexとして定義
+//     $('.tab__contents').removeClass('is-show').eq(index).addClass('is-show'); // showクラスを消して、contentクラスのindex番目にshowクラスを追加
+//   });
+// });
+
+$('.tab__menu').on('click', function () {
+  var $th = $(this).index();
+  $('.tab__menu').removeClass('is-active');
+  $('.tab__contents').removeClass('is-show');
+  $(this).addClass('is-active');
+  $('.tab__contents').eq($th).addClass('is-show');
+});
+
 //nav-menu-animation
 const navSlide = () => {
   const burger = document.querySelector('.nav-btn');
@@ -137,18 +157,6 @@ function onPlayerReady(event) {
 function onPlayerStateChange(event) {}
 
 $(function () {
-  // $('a[href^="http"]')
-  //   .not('[href*="kittaka.co.jp"]')
-  //   .click(function () {
-  //     window.open(this.href, '');
-  //     return false;
-  //   });
-  // $('.dropdown-toggle').click(function () {
-  //   var location = $(this).attr('href');
-  //   window.location.href = location;
-  //   return false;
-  // });
-
   // var navHeight = $('nav').outerHeight();
   // console.log(navHeight);
   var adjustWidth = $(window).width();

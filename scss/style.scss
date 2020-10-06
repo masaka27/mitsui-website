@@ -1248,8 +1248,8 @@ $arrow-size: 18px;
 .service__nav {
   display: flex;
   flex-direction: column;
-  li {
-    &.select {
+  .tab__menu {
+    &.is-active {
       a {
         opacity: 0.5;
       }
@@ -1323,6 +1323,12 @@ $arrow-size: 18px;
     vertical-align: middle;
     height: 100%;
     width: auto;
+  }
+}
+.tab__contents {
+  display: none;
+  &.is-show {
+    display: block;
   }
 }
 .tab__contents2 {
