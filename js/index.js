@@ -1,6 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// タブ切り替え
 // $(function () {
 //   let tabs = $('.tab__menu'); // tabのクラスを全て取得し、変数tabsに配列で定義
 //   $('.tab__menu').on('click', function () {
@@ -12,6 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 //   });
 // });
 
+//タブ切り替え
 $('.tab__menu').on('click', function () {
   var $th = $(this).index();
   $('.tab__menu').removeClass('is-active');

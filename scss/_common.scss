@@ -56,3 +56,11 @@ body {
 .mt-0 {
   margin-top: 0 !important;
 }
+.txt-rl {
+  writing-mode: vertical-rl;
+}
+.text-combine {
+  -webkit-text-combine: horizontal;
+  -ms-text-combine-horizontal: all;
+  text-combine-upright: all;
+}
