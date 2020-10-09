@@ -204,7 +204,7 @@ $bg-height: 100vw;
     content: '';
     position: absolute;
     @include bg-img();
-    background-image: url(../images/top-aboutus-bg.png);
+    background-image: url(#{$imgDir}top-aboutus-bg.png);
     width: 100%;
     height: $bg-height / 7.7;
     top: -4%;
@@ -723,6 +723,12 @@ $pt-pc: 85px;
     height: 557px;
     top: 50px;
   }
+  &.company__container {
+    &::before {
+      @extend .service__container::before;
+      background-image: url(#{$imgDir}company_main.jpg);
+    }
+  }
   & .service__inner {
     height: 80%;
     h1 {
@@ -907,12 +913,12 @@ $card-pd: 60px;
     }
     &:nth-child(1) {
       .business__img {
-        background-image: url(../images/business10.jpg);
+        background-image: url(#{$imgDir}business10.jpg);
       }
     }
     &:nth-child(2) {
       .business__img {
-        background-image: url(../images/business11.jpg);
+        background-image: url(#{$imgDir}business11.jpg);
       }
       .business__txt__inner {
         ul li {
@@ -922,7 +928,7 @@ $card-pd: 60px;
     }
     &:nth-child(3) {
       .business__img {
-        background-image: url(../images/business12.jpg);
+        background-image: url(#{$imgDir}business12.jpg);
       }
       .business__txt__inner {
         ul li {
@@ -932,7 +938,7 @@ $card-pd: 60px;
     }
     &:nth-child(4) {
       .business__img {
-        background-image: url(../images/business13.jpg);
+        background-image: url(#{$imgDir}business13.jpg);
       }
       .business__txt__inner {
         ul li {
@@ -958,7 +964,7 @@ $business-height: 850px;
     height: $business-height;
     top: 50%;
     @include bg-img();
-    background-image: url(../images/business-bg.jpg);
+    background-image: url(#{$imgDir}business-bg.jpg);
     background-position: top center;
   }
 }
@@ -989,22 +995,22 @@ $business-height: 850px;
         height: 370px;
         &:nth-child(1) {
           @include bg-img();
-          background-image: url(../images/service_ph1.jpg);
+          background-image: url(#{$imgDir}service_ph1.jpg);
         }
         &:nth-child(2) {
           @include bg-img();
-          background-image: url(../images/service_ph2.jpg);
+          background-image: url(#{$imgDir}service_ph2.jpg);
         }
       }
       &.service_img2 {
         div {
           &:nth-child(1) {
             @include bg-img();
-            background-image: url(../images/service_ph3.jpg);
+            background-image: url(#{$imgDir}service_ph3.jpg);
           }
           &:nth-child(2) {
             @include bg-img();
-            background-image: url(../images/service_ph4.jpg);
+            background-image: url(#{$imgDir}service_ph4.jpg);
           }
         }
       }
@@ -1012,11 +1018,11 @@ $business-height: 850px;
         div {
           &:nth-child(1) {
             @include bg-img();
-            background-image: url(../images/service_ph5.jpg);
+            background-image: url(#{$imgDir}service_ph5.jpg);
           }
           &:nth-child(2) {
             @include bg-img();
-            background-image: url(../images/service_ph6.jpg);
+            background-image: url(#{$imgDir}service_ph6.jpg);
           }
         }
       }
@@ -1024,11 +1030,11 @@ $business-height: 850px;
         div {
           &:nth-child(1) {
             @include bg-img();
-            background-image: url(../images/service_ph7.jpg);
+            background-image: url(#{$imgDir}service_ph7.jpg);
           }
           &:nth-child(2) {
             @include bg-img();
-            background-image: url(../images/service_ph8.jpg);
+            background-image: url(#{$imgDir}service_ph8.jpg);
           }
         }
       }
@@ -1036,11 +1042,11 @@ $business-height: 850px;
         div {
           &:nth-child(1) {
             @include bg-img();
-            background-image: url(../images/service_ph9.jpg);
+            background-image: url(#{$imgDir}service_ph9.jpg);
           }
           &:nth-child(2) {
             @include bg-img();
-            background-image: url(../images/service_ph10.jpg);
+            background-image: url(#{$imgDir}service_ph10.jpg);
           }
         }
       }
@@ -1048,11 +1054,11 @@ $business-height: 850px;
         div {
           &:nth-child(1) {
             @include bg-img();
-            background-image: url(../images/service_ph11.jpg);
+            background-image: url(#{$imgDir}service_ph11.jpg);
           }
           &:nth-child(2) {
             @include bg-img();
-            background-image: url(../images/service_ph12.jpg);
+            background-image: url(#{$imgDir}service_ph12.jpg);
           }
         }
       }
@@ -1060,11 +1066,11 @@ $business-height: 850px;
         div {
           &:nth-child(1) {
             @include bg-img();
-            background-image: url(../images/service_ph13.jpg);
+            background-image: url(#{$imgDir}service_ph13.jpg);
           }
           &:nth-child(2) {
             @include bg-img();
-            background-image: url(../images/service_ph14.jpg);
+            background-image: url(#{$imgDir}service_ph14.jpg);
           }
         }
       }
@@ -1096,21 +1102,21 @@ $business-height: 850px;
       .service_img {
         div {
           &:nth-child(1) {
-            background-image: url(../images/test_ph1.jpg);
+            background-image: url(#{$imgDir}test_ph1.jpg);
           }
           &:nth-child(2) {
-            background-image: url(../images/test_ph2.jpg);
+            background-image: url(#{$imgDir}test_ph2.jpg);
           }
         }
         &.service_img2 {
           div {
             &:nth-child(1) {
               @include bg-img();
-              background-image: url(../images/test_ph3.jpg);
+              background-image: url(#{$imgDir}test_ph3.jpg);
             }
             &:nth-child(2) {
               @include bg-img();
-              background-image: url(../images/test_ph4.jpg);
+              background-image: url(#{$imgDir}test_ph4.jpg);
             }
           }
         }
@@ -1118,11 +1124,11 @@ $business-height: 850px;
           div {
             &:nth-child(1) {
               @include bg-img();
-              background-image: url(../images/test_ph5.jpg);
+              background-image: url(#{$imgDir}test_ph5.jpg);
             }
             &:nth-child(2) {
               @include bg-img();
-              background-image: url(../images/test_ph6.jpg);
+              background-image: url(#{$imgDir}test_ph6.jpg);
             }
           }
         }
@@ -1130,11 +1136,11 @@ $business-height: 850px;
           div {
             &:nth-child(1) {
               @include bg-img();
-              background-image: url(../images/test_ph7.jpg);
+              background-image: url(#{$imgDir}test_ph7.jpg);
             }
             &:nth-child(2) {
               @include bg-img();
-              background-image: url(../images/test_ph8.jpg);
+              background-image: url(#{$imgDir}test_ph8.jpg);
             }
           }
         }
@@ -1142,11 +1148,11 @@ $business-height: 850px;
           div {
             &:nth-child(1) {
               @include bg-img();
-              background-image: url(../images/test_ph9.jpg);
+              background-image: url(#{$imgDir}test_ph9.jpg);
             }
             &:nth-child(2) {
               @include bg-img();
-              background-image: url(../images/test_ph10.jpg);
+              background-image: url(#{$imgDir}test_ph10.jpg);
             }
           }
         }
@@ -1158,21 +1164,21 @@ $business-height: 850px;
       .service_img {
         div {
           &:nth-child(1) {
-            background-image: url(../images/mea_ph1.jpg);
+            background-image: url(#{$imgDir}mea_ph1.jpg);
           }
           &:nth-child(2) {
-            background-image: url(../images/mea_ph2.jpg);
+            background-image: url(#{$imgDir}mea_ph2.jpg);
           }
         }
         &.service_img2 {
           div {
             &:nth-child(1) {
               @include bg-img();
-              background-image: url(../images/mea_ph3.jpg);
+              background-image: url(#{$imgDir}mea_ph3.jpg);
             }
             &:nth-child(2) {
               @include bg-img();
-              background-image: url(../images/mea_ph4.jpg);
+              background-image: url(#{$imgDir}mea_ph4.jpg);
             }
           }
         }
@@ -1180,11 +1186,11 @@ $business-height: 850px;
           div {
             &:nth-child(1) {
               @include bg-img();
-              background-image: url(../images/mea_ph5.jpg);
+              background-image: url(#{$imgDir}mea_ph5.jpg);
             }
             &:nth-child(2) {
               @include bg-img();
-              background-image: url(../images/mea_ph6.jpg);
+              background-image: url(#{$imgDir}mea_ph6.jpg);
             }
           }
         }
@@ -1192,11 +1198,11 @@ $business-height: 850px;
           div {
             &:nth-child(1) {
               @include bg-img();
-              background-image: url(../images/mea_ph7.jpg);
+              background-image: url(#{$imgDir}mea_ph7.jpg);
             }
             &:nth-child(2) {
               @include bg-img();
-              background-image: url(../images/mea_ph8.jpg);
+              background-image: url(#{$imgDir}mea_ph8.jpg);
             }
           }
         }
@@ -1208,7 +1214,7 @@ $business-height: 850px;
       .service_img {
         div {
           &:nth-child(1) {
-            background-image: url(../images/ins_ph1.jpg);
+            background-image: url(#{$imgDir}ins_ph1.jpg);
           }
         }
       }
@@ -1233,6 +1239,7 @@ $business-height: 850px;
   font-weight: bold;
   margin-bottom: $mb-100;
   position: relative;
+  display: inline-block;
   small {
     font-size: 0.6em;
   }
@@ -1243,7 +1250,7 @@ $business-height: 850px;
     width: 30%;
     background-color: $cTitle;
     left: 0;
-    bottom: -50%;
+    bottom: -30%;
   }
 }
 .service__top_right {
@@ -1274,7 +1281,7 @@ $arrow-size: 18px;
       width: $arrow-size;
       height: $arrow-size;
       @include bg-img();
-      background-image: url(../images/arrow1.svg);
+      background-image: url(#{$imgDir}arrow1.svg);
       background-color: transparent;
     }
   }
@@ -1603,8 +1610,9 @@ $sub__tit2-width: 280px;
   padding-left: 10px;
 }
 .machine__container {
+  margin-top: $xl;
   .table__col {
-    margin-top: 50px;
+    // margin-top: 50px;
     dt,
     dd {
       font-weight: bold;
@@ -1640,6 +1648,11 @@ $sub__tit2-width: 280px;
   }
   .service__sub__title {
     margin-bottom: $mb-100 * 0.5;
+    &.tab__contents3__title {
+      &::after {
+        width: 100%;
+      }
+    }
   }
 }
 .machine__menu {
@@ -1714,6 +1727,7 @@ $sub__tit2-width: 280px;
   .machine__top_right {
     position: absolute;
     right: 0;
+    z-index: 2;
   }
 }
 
@@ -1729,4 +1743,114 @@ $sub__tit2-width: 280px;
     top: 50%;
     transform: translate(-50%, -50%);
   }
+}
+// company
+.company__inner__wrap {
+  display: flex;
+  justify-content: space-between;
+  & > .company__inner__block {
+    flex: 0 1 45%;
+    &:nth-child(2) {
+      position: relative;
+      flex: 0 1 50%;
+      &::before {
+        content: '';
+        position: absolute;
+        @include bg-img();
+        background-image: url(#{$imgDir}company_img1.jpg);
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+.company__inner .service__sub__title {
+  margin-bottom: $mb-100 * 0.7;
+  &::after {
+    width: 100%;
+  }
+}
+.company__list__wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  & > dl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    dt,
+    dd {
+      border-bottom: 1px solid $borderGray;
+      padding: 10px 0;
+    }
+    dt {
+      flex: 0 1 23%;
+    }
+    dd {
+      flex: 0 1 77%;
+    }
+  }
+}
+.company__map__wrap {
+  ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    li {
+      flex: 0 1 48%;
+      border-top: 1px solid $borderGray;
+      border-bottom: 1px solid $borderGray;
+      padding: 10px 0;
+    }
+  }
+}
+.map__container {
+  margin-top: $mt-100 * 0.5;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 40%;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+.company__bg-logo {
+  position: relative;
+  height: 470px;
+  margin-bottom: -180px;
+  &::before {
+    content: '';
+    @include bg-img();
+    background-image: url(#{$imgDir}company_bg_logo.svg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+  }
+}
+.company__bg-type {
+  @extend .company__bg-logo;
+  margin-bottom: 0;
+  margin-top: 50px;
+  height: 268px;
+  @include mq-down(xl) {
+    min-height: 268px;
+  }
+  &::before {
+    background-image: url(#{$imgDir}company_bg.svg);
+    left: -2%;
+    background-size: cover;
+    background-position: left top;
+    width: 130%;
+    @include mq-down(xl) {
+      background-size: contain;
+    }
+  }
+}
+.company__inner-3 {
+  margin-top: $mt-100;
 }

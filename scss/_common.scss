@@ -24,6 +24,9 @@ a {
     opacity: 0.7;
   }
 }
+.pc-none {
+  display: block;
+}
 .f-right {
   float: right;
 }
@@ -63,4 +66,7 @@ body {
   -webkit-text-combine: horizontal;
   -ms-text-combine-horizontal: all;
   text-combine-upright: all;
+}
+.text-right {
+  text-align: right;
 }
